@@ -9,6 +9,11 @@ public class chessPiece{
 	private int posY;
 	
 	// Object Methods
+	public void createPiece(String c, String p, int a, int b){
+		setColor(c);
+		setPieceType(p);
+		setPosition(a,b);		
+	}
 	
 	public String getPosition(){
 		return "Piece position: " + posX + "," + posY;
