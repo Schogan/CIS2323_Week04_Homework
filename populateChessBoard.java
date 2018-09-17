@@ -7,12 +7,13 @@ public class populateChessBoard{
 		chessPiece[] whitePieces  = new chessPiece[COUNT];
 		chessPiece[] blackPieces  = new chessPiece[COUNT];
 		
-		int count=0;
-		String type;
+		int countA=0;
+		int countB=0;
+		String type = "holder";
 		int posX=0;
 		int posY=0;
 		
-		while (count<COUNT){
+		while (countA<COUNT){
 			for(int i=1;i<3;i++){
 				for(int j=1;j<9;j++){
 					if(i==2){
@@ -34,12 +35,13 @@ public class populateChessBoard{
 						type = "king";
 					}
 					
-					whitePieces = new chessPiece();
-					whitePieces.createPiece("White", type, i, j);
-					count++;
+					whitePieces[countA] = new chessPiece();
+					whitePieces[countA].createPiece("White", type, i, j);
+					countA++;
 				}
 			}
-			
+		}
+		while (countB<COUNT){	
 			for(int i=8;i>6;i--){
 				for(int j=1;j<9;j++){
 					if(i==7){
@@ -61,9 +63,9 @@ public class populateChessBoard{
 						type = "king";
 					}
 					
-					blackPieces = new chessPiece();
-					blackPieces.createPiece("Black", type, i, j);
-					count++;
+					blackPieces[countB] = new chessPiece();
+					blackPieces[countB].createPiece("Black", type, i, j);
+					countB++;
 				}
 			}
 		}
