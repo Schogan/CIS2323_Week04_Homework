@@ -4,8 +4,8 @@ public class populateChessBoard{
 	public static void main(String[] args){
 		final int COUNT = 16;
 		
-		chessPiece[] whitePieces  = new chessPiece [COUNT];
-		chessPiece[] blackPieces  = new chessPiece [COUNT];
+		chessPiece[] whitePieces  = new chessPiece[COUNT];
+		chessPiece[] blackPieces  = new chessPiece[COUNT];
 		
 		int count=0;
 		String type;
@@ -15,22 +15,22 @@ public class populateChessBoard{
 		while (count<COUNT){
 			for(int i=1;i<3;i++){
 				for(int j=1;j<9;j++){
-					if(i=2){
+					if(i==2){
 						type = "pawn";
 					}
-					if(i=1 && (j=1||j=8)){
+					if(i==1 && (j==1||j==8)){
 						type = "rook";
 					}
-					if(i=1 && (j=2||j=7)){
+					if(i==1 && (j==2||j==7)){
 						type = "knight";
 					}
-					if(i=1 && (j=3||j=6)){
+					if(i==1 && (j==3||j==6)){
 						type = "bishop";
 					}
-					if(i=1 && j=4){
+					if(i==1 && j==4){
 						type = "queen";
 					}
-					if(i=1 && j=5){
+					if(i==1 && j==5){
 						type = "king";
 					}
 					
@@ -42,22 +42,22 @@ public class populateChessBoard{
 			
 			for(int i=8;i>6;i--){
 				for(int j=1;j<9;j++){
-					if(i=7){
+					if(i==7){
 						type = "pawn";
 					}
-					if(i=8 && (j=1||j=8)){
+					if(i==8 && (j==1||j==8)){
 						type = "rook";
 					}
-					if(i=8 && (j=2||j=7)){
+					if(i==8 && (j==2||j==7)){
 						type = "knight";
 					}
-					if(i=8 && (j=3||j=6)){
+					if(i==8 && (j==3||j==6)){
 						type = "bishop";
 					}
-					if(i=8 && j=4){
+					if(i==8 && j==4){
 						type = "queen";
 					}
-					if(i=8 && j=5){
+					if(i==8 && j==5){
 						type = "king";
 					}
 					
